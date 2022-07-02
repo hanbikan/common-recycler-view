@@ -11,19 +11,19 @@ import com.example.commonrecyclerview.utility.ViewType
 
 class CommonAdapter(
     private val dataSet: Array<CommonItem>
-    ) : RecyclerView.Adapter<GeneralViewHolder>() {
+    ) : RecyclerView.Adapter<CommonViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GeneralViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CommonViewHolder {
         /** 새로운 뷰타입이 생길 때마다 분기를 추가해야 합니다. */
         return when(viewType) {
             ViewType.ONE_LINE_TEXT.ordinal ->
-                GeneralViewHolder.OneLineTextViewHolder(
+                CommonViewHolder.OneLineTextViewHolder(
                     getViewDataBinding(parent, R.layout.item_one_line_text))
             ViewType.TWO_LINE_TEXT.ordinal ->
-                GeneralViewHolder.TwoLineTextViewHolder(
+                CommonViewHolder.TwoLineTextViewHolder(
                     getViewDataBinding(parent, R.layout.item_two_line_text))
             else ->
-                GeneralViewHolder.OneImageViewHolder(
+                CommonViewHolder.OneImageViewHolder(
                     getViewDataBinding(parent, R.layout.item_one_image))
         }
     }
@@ -37,7 +37,7 @@ class CommonAdapter(
         )
     }
 
-    override fun onBindViewHolder(holder: GeneralViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: CommonViewHolder, position: Int) {
         holder.bind(dataSet[position])
     }
 

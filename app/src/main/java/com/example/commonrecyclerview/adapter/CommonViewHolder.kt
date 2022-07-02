@@ -10,14 +10,14 @@ import com.example.commonrecyclerview.databinding.ItemOneLineTextBinding
 import com.example.commonrecyclerview.databinding.ItemTwoLineTextBinding
 
 /** 새로운 뷰타입이 생길 때마다 뷰홀더를 추가해야 합니다. */
-sealed class GeneralViewHolder(
+sealed class CommonViewHolder(
         binding: ViewDataBinding
     ) : RecyclerView.ViewHolder(binding.root) {
     abstract fun bind(item: CommonItem)
 
     class OneLineTextViewHolder(
         private val binding: ItemOneLineTextBinding
-        ) : GeneralViewHolder(binding) {
+        ) : CommonViewHolder(binding) {
         override fun bind(item: CommonItem) {
             val viewObject = item.viewObject as ViewObject.OneLineTextViewObject
             binding.textContents.text = viewObject.contents
@@ -25,7 +25,7 @@ sealed class GeneralViewHolder(
     }
     class TwoLineTextViewHolder(
         private val binding: ItemTwoLineTextBinding
-    ) : GeneralViewHolder(binding) {
+    ) : CommonViewHolder(binding) {
         override fun bind(item: CommonItem) {
             val viewObject = item.viewObject as ViewObject.TwoLineTextViewObject
             binding.textTitle.text = viewObject.title
@@ -34,7 +34,7 @@ sealed class GeneralViewHolder(
     }
     class OneImageViewHolder(
         private val binding: ItemOneImageBinding
-    ) : GeneralViewHolder(binding) {
+    ) : CommonViewHolder(binding) {
         override fun bind(item: CommonItem) {
             val viewObject = item.viewObject as ViewObject.OneImageViewObject
             Glide.with(binding.root)
