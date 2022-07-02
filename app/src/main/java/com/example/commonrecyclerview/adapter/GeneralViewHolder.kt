@@ -20,7 +20,7 @@ sealed class GeneralViewHolder(
         ) : GeneralViewHolder(binding) {
         override fun bind(item: CommonItem) {
             val viewObject = item.viewObject as ViewObject.OneLineTextViewObject
-            binding.text.text = viewObject.text1
+            binding.textContents.text = viewObject.contents
         }
     }
     class TwoLineTextViewHolder(
@@ -28,8 +28,8 @@ sealed class GeneralViewHolder(
     ) : GeneralViewHolder(binding) {
         override fun bind(item: CommonItem) {
             val viewObject = item.viewObject as ViewObject.TwoLineTextViewObject
-            binding.text1.text = viewObject.text1
-            binding.text2.text = viewObject.text2
+            binding.textTitle.text = viewObject.title
+            binding.textContents.text = viewObject.contents
         }
     }
     class OneImageViewHolder(
