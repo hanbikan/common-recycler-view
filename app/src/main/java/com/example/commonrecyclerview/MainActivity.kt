@@ -21,13 +21,13 @@ class MainActivity : AppCompatActivity() {
                 {
                     "viewType": "ONE_LINE_TEXT",
                     "viewObject": {
-                        "text1": "Text1"
+                        "text1": "제목이 없는 글입니다."
                     }
                 },{
                     "viewType": "TWO_LINE_TEXT",
                     "viewObject": {
-                        "text1": "Text1",
-                        "text2": "Text2"
+                        "text1": "제목입니다.",
+                        "text2": "안녕하세요. 반갑습니다. 제 이름은 홍길동입니다."
                     }
                 },{
                     "viewType": "ONE_IMAGE",
@@ -42,10 +42,10 @@ class MainActivity : AppCompatActivity() {
             arrayOf(
                 CommonItem(
                     "ONE_LINE_TEXT",
-                    ViewObject.OneLineTextViewObject("Text1")
+                    ViewObject.OneLineTextViewObject("제목이 없는 글입니다.")
                 ), CommonItem(
                     "TWO_LINE_TEXT",
-                    ViewObject.TwoLineTextViewObject("Text1", "Text2")
+                    ViewObject.TwoLineTextViewObject("제목입니다.", "안녕하세요. 반갑습니다. 제 이름은 홍길동입니다.")
                 ), CommonItem(
                     "ONE_IMAGE",
                     ViewObject.OneImageViewObject("https://picsum.photos/536/354")
