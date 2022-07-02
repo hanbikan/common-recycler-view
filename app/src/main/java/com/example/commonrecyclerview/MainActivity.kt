@@ -21,13 +21,13 @@ class MainActivity : AppCompatActivity() {
                 {
                     "viewType": "ONE_LINE_TEXT",
                     "viewObject": {
-                        "text1": "제목이 없는 글입니다."
+                        "contents": "제목이 없는 글입니다."
                     }
                 },{
                     "viewType": "TWO_LINE_TEXT",
                     "viewObject": {
-                        "text1": "제목입니다.",
-                        "text2": "안녕하세요. 반갑습니다. 제 이름은 홍길동입니다."
+                        "title": "제목입니다.",
+                        "contents": "안녕하세요. 반갑습니다. 제 이름은 홍길동입니다."
                     }
                 },{
                     "viewType": "ONE_IMAGE",
