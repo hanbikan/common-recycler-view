@@ -5,7 +5,10 @@ import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import com.example.commonrecyclerview.adapter.CommonAdapter
 import com.example.commonrecyclerview.data.CommonItem
-import com.example.commonrecyclerview.data.ViewObject
+import com.example.commonrecyclerview.data.viewobject.OneImageViewObject
+import com.example.commonrecyclerview.data.viewobject.OneLineTextViewObject
+import com.example.commonrecyclerview.data.viewobject.TwoLineTextViewObject
+import com.example.commonrecyclerview.data.viewobject.ViewObject
 import com.example.commonrecyclerview.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -42,13 +45,13 @@ class MainActivity : AppCompatActivity() {
             arrayOf(
                 CommonItem(
                     "ONE_LINE_TEXT",
-                    ViewObject.OneLineTextViewObject("제목이 없는 글입니다.")
+                    OneLineTextViewObject("제목이 없는 글입니다.")
                 ), CommonItem(
                     "TWO_LINE_TEXT",
-                    ViewObject.TwoLineTextViewObject("제목입니다.", "안녕하세요. 반갑습니다. 제 이름은 홍길동입니다.")
+                    TwoLineTextViewObject("제목입니다.", "안녕하세요. 반갑습니다. 제 이름은 홍길동입니다.")
                 ), CommonItem(
                     "ONE_IMAGE",
-                    ViewObject.OneImageViewObject("https://picsum.photos/536/354")
+                    OneImageViewObject("https://picsum.photos/536/354")
                 )
             )
         )
