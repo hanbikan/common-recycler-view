@@ -9,7 +9,7 @@ import com.example.commonrecyclerview.viewholder.CommonViewHolder
 
 class CommonAdapter(
     private val dataSet: Array<CommonItem>
-    ) : RecyclerView.Adapter<CommonViewHolder>() {
+) : RecyclerView.Adapter<CommonViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CommonViewHolder {
         return CommonViewHolderFactory.createViewHolder(parent, viewType)

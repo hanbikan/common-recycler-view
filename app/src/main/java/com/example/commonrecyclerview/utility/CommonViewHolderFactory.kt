@@ -11,6 +11,7 @@ import com.example.commonrecyclerview.viewholder.OneLineTextViewHolder
 import com.example.commonrecyclerview.viewholder.TwoLineTextViewHolder
 
 object CommonViewHolderFactory {
+    /** 새로운 뷰타입이 생길 때마다 업데이트해야 합니다. */
     fun createViewHolder(parent: ViewGroup, viewType: Int): CommonViewHolder {
         return when(viewType) {
             ViewType.ONE_LINE_TEXT.ordinal -> OneLineTextViewHolder(getViewDataBinding(parent, R.layout.item_one_line_text))
