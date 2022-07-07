@@ -14,27 +14,7 @@ class CommonAdapter(
     ) : RecyclerView.Adapter<CommonViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CommonViewHolder {
-        /** 새로운 뷰타입이 생길 때마다 분기를 추가해야 합니다. */
-        return when(viewType) {
-            ViewType.ONE_LINE_TEXT.ordinal ->
-                CommonViewHolder.OneLineTextViewHolder(
-                    getViewDataBinding(parent, R.layout.item_one_line_text))
-            ViewType.TWO_LINE_TEXT.ordinal ->
-                CommonViewHolder.TwoLineTextViewHolder(
-                    getViewDataBinding(parent, R.layout.item_two_line_text))
-            else ->
-                CommonViewHolder.OneImageViewHolder(
-                    getViewDataBinding(parent, R.layout.item_one_image))
-        }
-    }
-
-    private fun <T: ViewDataBinding> getViewDataBinding(parent: ViewGroup, layoutRes: Int): T {
-        return DataBindingUtil.inflate(
-            LayoutInflater.from(parent.context),
-            layoutRes,
-            parent,
-            false
-        )
+        return ViewType.getViewHolder(parent, viewType)
     }
 
     override fun onBindViewHolder(holder: CommonViewHolder, position: Int) {
