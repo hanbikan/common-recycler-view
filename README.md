@@ -6,7 +6,7 @@ common-recycler-view는 Multi view type를 지원하는 RecyclerView의 예제 �
 
 # License
 ```
-Copyright 2022 Hanbit Kang
+Copyright 2022 hanbikan(Hanbit Kang)
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
